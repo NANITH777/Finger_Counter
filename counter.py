@@ -21,3 +21,11 @@ while (cap.isOpened()):
             h,w,c=img.shape
             cx,cy=int(lm.x*w),int(lm.y*h)
             lmList.append((cx,cy))
+
+        for hand_in_frame in results.multi_hand_landmarks: # looping through hands exists in the Frame 
+            mpDraw.draw_landmarks(img,hand_in_frame, mpHands.HAND_CONNECTIONS) # drawing Hand Connections  
+        for point in lmList:
+            cv2.circle(img,point,5,(0,255,0),cv2.FILLED) 
+        for coordinate in fingersCoordinate:
+            if lmList[coordinate[0]][1] < lmList[coordinate[1]][1]:
+                upcount+=1

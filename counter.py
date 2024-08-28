@@ -29,3 +29,6 @@ while (cap.isOpened()):
         for coordinate in fingersCoordinate:
             if lmList[coordinate[0]][1] < lmList[coordinate[1]][1]:
                 upcount+=1
+        if lmList[thumbCoordinate[0]][0] > lmList[thumbCoordinate[1]][0]:
+            upcount+=1
+        cv2.putText(img,str(upcount),(150,150),cv2.FONT_HERSHEY_PLAIN,12,(0,0,255),12)

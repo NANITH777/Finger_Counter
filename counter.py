@@ -32,3 +32,8 @@ while (cap.isOpened()):
         if lmList[thumbCoordinate[0]][0] > lmList[thumbCoordinate[1]][0]:
             upcount+=1
         cv2.putText(img,str(upcount),(150,150),cv2.FONT_HERSHEY_PLAIN,12,(0,0,255),12)
+
+    cv2.imshow("Hand Tracking", img)
+
+    if cv2.waitKey(1) == 113: # 113 - Q : press on Q : Close Video 
+        break

@@ -10,7 +10,7 @@ cap = cv2.VideoCapture(0)
 
 while (cap.isOpened()):
     upcount=0
-    success , img = cap.read() # reading Frame 
+    success , img = cap.read() 
     converted_image = cv2.cvtColor(img,cv2.COLOR_BGR2RGB) # converting BGR to RGB
     results = Hands.process(converted_image) # Processing Image for Tracking 
     handNo=0

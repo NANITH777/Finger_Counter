@@ -20,8 +20,8 @@ This project utilizes OpenCV and MediaPipe to perform real-time hand gesture rec
 1. **Clone the Repository**
 
    ```bash
-   [git clone https://github.com/yourusername/hand-gesture-recognition.git](https://github.com/NANITH777/Finger_Counter.git)
-   cd BreadcrumbsFinger_Counter
+   git clone https://github.com/NANITH777/Finger_Counter.git
+   cd Finger_Counter
 
    ```
 
